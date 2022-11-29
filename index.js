@@ -134,7 +134,7 @@ app.use((request, response) => {
     })
 })
 
-const port = 3001;
+const PORT = procces.env.PORT || 3001;
 
 
 connection.connect(error => {
@@ -144,6 +144,6 @@ connection.connect(error => {
     console.log("Database server running!");
 })
 
-app.listen(port, () => {
-    console.log(`server running in port ${port}`)
+app.listen(PORT, () => {
+    console.log(`server running in port ${PORT}`)
 })
