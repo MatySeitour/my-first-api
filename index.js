@@ -107,25 +107,6 @@ app.post(`/api/notes`, (request, response) => {
         if (error) throw error;
         response.send("Book create")
     })
-    // if (!note || !note.content) {
-    //     return response.status(400).json({
-    //         error: "note.content is missing",
-    //     })
-    // }
-
-    // const ids = notes.map(note => note.id);
-    // const maxId = Math.max(...ids);
-
-    // const newNote = {
-    //     book_id: maxId + 1,
-    //     content: note.content,
-    //     important: typeof note.important !== "undefined" ? note.important : false,
-    //     data: new Date().toISOString(),
-    // }
-
-    // notes = [...notes, newNote];
-
-    // response.json(newNote);
 })
 
 app.use((request, response) => {
@@ -134,7 +115,7 @@ app.use((request, response) => {
     })
 })
 
-const PORT = procces.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 
 connection.connect(error => {
