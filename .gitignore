@@ -1,2 +1,7 @@
 node_modules
-.env
+# PORT=3001
+# DB_HOST=localhost
+# DB_PORT=3306
+# DB_USER=root
+# DB_PASSWORD=matcr7shirohige
+# DB_DATABASE=platzi_operation
