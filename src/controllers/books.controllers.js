@@ -8,7 +8,7 @@ export const getBooks = async (request, response) => {
     }
     catch (error) {
         return response.status(500).json({
-            message: "something was wrong"
+            message: "somethingasdas was wrong"
         })
     }
 }
