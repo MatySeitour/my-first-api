@@ -12,3 +12,6 @@ CREATE TABLE books(
     UNIQUE KEY book_id 
      (book_id)
 );
+
+INSERT INTO books(author_id, title, year, language, price, sellable, copies)
+    VALUES(1, "Batman Inicia", 2001, "EN", 20.00, 1, 200);

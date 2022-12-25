@@ -35,7 +35,7 @@ export const putBook = async (request, response) => {
         const id = Number(request.params.id);
         const { author_id, title, year, language, cover_url, price, sellable, copies, description } = request.body;
 
-        const [result] = await pool.query(`UPDATE books SET copies = IFNULL(?, copies), title = IFNULL(?, title) WHERE book_id = ?`, [copies, title, id])
+        const [result] = await pool.query(`UPDATE books SET ? WHERE book_id = ?`, [request.body, id])
 
         if (result.affectedRows === 0) return response.status(404).json({
             message: "Book not found"
